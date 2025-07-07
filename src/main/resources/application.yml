@@ -1,0 +1,25 @@
+server:
+  port: 8181
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mustafayevfarid2002@gmail.com
+    password: arbf fmno xchc ympf
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enabled: true
+            required: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"

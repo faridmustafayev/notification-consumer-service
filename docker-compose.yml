@@ -1,0 +1,14 @@
+version: '3.8'
+
+networks:
+  local-kafka:
+    driver: bridge
+
+services:
+  notification-service:
+    container_name: notification-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
