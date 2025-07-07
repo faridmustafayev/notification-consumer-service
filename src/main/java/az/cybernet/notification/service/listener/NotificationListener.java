@@ -29,7 +29,7 @@ public class NotificationListener {
 
         log.info("📧 Sending email to customer with order details...");
 
-        emailService.sendEmail("afganmustafayev99@gmail.com", "Order information", message);
+        emailService.sendEmail("mgzlovprsnl@gmail.com", "Order information", message);
     }
 }
 
